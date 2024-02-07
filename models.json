@@ -114,6 +114,6 @@
     "urls": [
       "https://huggingface.co/TheBloke/deepseek-coder-33B-base-GGUF/blob/main/deepseek-coder-33b-base.Q4_K_M.gguf"
     ],
-    "sha256": "a2f82242ac5e465037cbf1ed754f04f0be044ee196e1589905f9e4dcd0e6559d"
+    "sha256": "efa33206da46d2ea9e2c0f9b21ffffbed9065bd1955c67fb0d16602fa19952a0"
   }
 ]
