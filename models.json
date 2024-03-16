@@ -137,5 +137,16 @@
       "https://huggingface.co/LoneStriker/CodeLlama-70b-Instruct-hf-GGUF/resolve/main/CodeLlama-70b-Instruct-hf-Q4_K_M.gguf"
     ],
     "sha256": "de9558512f2b26b82be73c50ad4bdc2578403a787a76c8dda455f6683269b299"
+  },
+  {
+    "name": "CodeLlama-70B-Python",
+    "provider_url": "https://huggingface.co/codellama/CodeLlama-70b-Python-hf",
+    "license_name": "Llama 2",
+    "license_url": "https://ai.meta.com/llama/license/",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "urls": [
+      "https://huggingface.co/TheBloke/CodeLlama-70B-Python-GGUF/blob/main/codellama-70b-python.Q4_K_M.gguf"
+    ],
+    "sha256":""
   }
 ]
