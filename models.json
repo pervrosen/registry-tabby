@@ -148,7 +148,7 @@
       "https://huggingface.co/TheBloke/CodeLlama-70B-Python-GGUF/blob/main/codellama-70b-python.Q4_K_M.gguf"
     ],
     "sha256":"043fddc12e2ef78bfbed52e12bd94cd8a644e912b15915b57ad79e0b81e12aea"
-  }
+  },
   {
     "name": "Codestral-22B",
     "provider_url": "https://huggingface.co/codellama/CodeLlama-70b-Python-hf",
