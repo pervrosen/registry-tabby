@@ -159,5 +159,15 @@
       "https://huggingface.co/bartowski/Codestral-22B-v0.1-GGUF/blob/main/Codestral-22B-v0.1-Q5_K_S.gguf"
     ],
     "sha256":"56b59de56aed9c378a69cc4907e5c8b7af63d039944a03008d9e27e8308d9d7b"
-  }
+  },
+  {
+    "name": "granite7B",
+    "provider_url": "https://huggingface.co/instructlab/granite-7b-lab",
+    "license_name": "apache-2.0",
+    "license_url": "apache-2.0",
+    "prompt_template": "{% for message in messages %}{% if message['role'] == 'system' %}{{'<|system|>'+ '\n' + message['content'] + '\n'}}{% elif message['role'] == 'user' %}{{'<|user|>' + '\n' + message['content'] + '\n'}}{% elif message['role'] == 'assistant' %}{{'<|assistant|>' + '\n' + message['content'] + '<|endoftext|>' + ('' if loop.last else '\n')}}{% endif %}{% endfor %}",
+    "urls": [
+      "https://huggingface.co/instructlab/merlinite-7b-lab-GGUF/blob/main/merlinite-7b-lab-Q4_K_M.gguf"
+    ],
+    "sha256":"9ca044d727db34750e1aeb04e3b18c3cf4a8c064a9ac96cf00448c506631d16c"
 ]
