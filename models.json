@@ -170,5 +170,16 @@
       "https://huggingface.co/instructlab/merlinite-7b-lab-GGUF/resolve/main/merlinite-7b-lab-Q4_K_M.gguf"
     ],
     "sha256":"9ca044d727db34750e1aeb04e3b18c3cf4a8c064a9ac96cf00448c506631d16c"
+  },
+  {
+    "name": "granite34B-code",
+    "provider_url": "https://huggingface.co/ibm-granite/granite-34b-code-instruct-8k",
+    "license_name": "apache-2.0",
+    "license_url": "apache-2.0",
+    "chat_template": "{% for message in messages %}\n{% if message['role'] == 'user' %}\n{{ 'Question:\n' + message['content'] + '\n\n' }}{% elif message['role'] == 'system' %}\n{{ 'System:\n' + message['content'] + '\n\n' }}{% elif message['role'] == 'assistant' %}{{ 'Answer:\n'  + message['content'] + '\n\n' }}{% endif %}\n{% if loop.last and add_generation_prompt %}\n{{ 'Answer:\n' }}{% endif %}{% endfor %}",
+    "urls": [
+      "https://huggingface.co/ibm-granite/granite-34b-code-instruct-8k-GGUF/resolve/main/granite-34b-code-instruct.Q4_K_M.gguf
+    ],
+    "sha256":"bd9d561154525255511356632782f09046c77355cf0c99cced464e1f7da523cc"
   }
 ]
