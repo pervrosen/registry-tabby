@@ -167,7 +167,7 @@
     "license_url": "apache-2.0",
     "prompt_template": "{% for message in messages %}{% if message['role'] == 'system' %}{{'<|system|>'+ '\n' + message['content'] + '\n'}}{% elif message['role'] == 'user' %}{{'<|user|>' + '\n' + message['content'] + '\n'}}{% elif message['role'] == 'assistant' %}{{'<|assistant|>' + '\n' + message['content'] + '<|endoftext|>' + ('' if loop.last else '\n')}}{% endif %}{% endfor %}",
     "urls": [
-      "https://huggingface.co/instructlab/merlinite-7b-lab-GGUF/blob/main/merlinite-7b-lab-Q4_K_M.gguf"
+      "https://huggingface.co/instructlab/merlinite-7b-lab-GGUF/resolve/main/merlinite-7b-lab-Q4_K_M.gguf"
     ],
     "sha256":"9ca044d727db34750e1aeb04e3b18c3cf4a8c064a9ac96cf00448c506631d16c"
   }
