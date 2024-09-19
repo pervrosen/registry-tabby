@@ -181,5 +181,16 @@
       "https://huggingface.co/ibm-granite/granite-34b-code-instruct-8k-GGUF/resolve/main/granite-34b-code-instruct.Q4_K_M.gguf"
     ],
     "sha256":"bd9d561154525255511356632782f09046c77355cf0c99cced464e1f7da523cc"
+  },
+  {
+    "name": "yi-coder-9B-chat",
+    "provider_url": "https://huggingface.co/01-ai/Yi-Coder-9B-Chat",
+    "license_name": "",
+    "license_url": "",
+    "chat_template": "{{- if .Messages }}{{- range $i, $_ := .Messages }}{{- $last := eq (len (slice $.Messages $i)) 1 -}}<|im_start|>{{ .Role }}{{ .Content }}{{ if (or (ne .Role "assistant") (not $last)) }}<|im_end|>{{ end }}{{- if (and $last (ne .Role "assistant")) }}<|im_start|>assistant{{ end }}{{- end }}{{- else }}{{- if .System }}<|im_start|>system{{ .System }}<|im_end|>{{ end }}{{ if .Prompt }}<|im_start|>user{{ .Prompt }}<|im_end|>{{ end }}<|im_start|>assistant{{ end }}{{ .Response }}{{ if .Response }}<|im_end|>{{ end }}",
+    "urls": [
+      "https://huggingface.co/bartowski/Yi-Coder-9B-Chat-GGUF/resolve/main/Yi-Coder-9B-Chat-Q4_K_M.gguf"
+    ],
+    "sha256":"251cc196e3813d149694f362bb0f8f154f3320abe44724eebe58c23dc54f201d"
   }
 ]
