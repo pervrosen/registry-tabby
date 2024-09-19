@@ -187,7 +187,7 @@
     "provider_url": "https://huggingface.co/01-ai/Yi-Coder-9B-Chat",
     "license_name": "",
     "license_url": "",
-    "chat_template": "{{- if .Messages }}{{- range $i, $_ := .Messages }}{{- $last := eq (len (slice $.Messages $i)) 1 -}}<|im_start|>{{ .Role }}{{ .Content }}{{ if (or (ne .Role "assistant") (not $last)) }}<|im_end|>{{ end }}{{- if (and $last (ne .Role "assistant")) }}<|im_start|>assistant{{ end }}{{- end }}{{- else }}{{- if .System }}<|im_start|>system{{ .System }}<|im_end|>{{ end }}{{ if .Prompt }}<|im_start|>user{{ .Prompt }}<|im_end|>{{ end }}<|im_start|>assistant{{ end }}{{ .Response }}{{ if .Response }}<|im_end|>{{ end }}",
+    "chat_template": "<s> [INST] <<SYS>>\n{system_prompt}\n<</SYS>>\n\n{prompt} [/INST]  </s>\n",
     "urls": [
       "https://huggingface.co/bartowski/Yi-Coder-9B-Chat-GGUF/resolve/main/Yi-Coder-9B-Chat-Q4_K_M.gguf"
     ],
