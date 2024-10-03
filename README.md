@@ -1,11 +1,11 @@
 # 🧑‍🔬 Tabby Registry
 
 ```
-tabby.v0.18.rc4 serve --model pervrosen/granite7B --chat-model pervrosen/nxcode-7B-chat --device cuda
+tabby.v0.18 serve --model pervrosen/granite7B --chat-model pervrosen/nxcode-7B-chat --device cuda
 
-tabby.v0.18.rc4 serve --model pervrosen/granite7B --chat-model pervrosen/codeqwen1.5-7B-chat --device cuda
+tabby.v0.18 serve --model pervrosen/granite7B --chat-model pervrosen/codeqwen1.5-7B-chat --device cuda
 
-tabby.v0.18.rc4 serve --model pervrosen/granite7B --chat-model pervrosen/yi-coder-9B-chat --device cuda
+tabby.v0.18 serve --model pervrosen/granite7B --chat-model pervrosen/yi-coder-9B-chat --device cuda
 
 tabby.v0.17.0 serve --model pervrosen/granite7B --chat-model pervrosen/yi-coder-9B-chat --device cuda
 
