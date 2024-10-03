@@ -192,5 +192,27 @@
       "https://huggingface.co/bartowski/Yi-Coder-9B-Chat-GGUF/resolve/main/Yi-Coder-9B-Chat-Q4_K_M.gguf"
     ],
     "sha256":"251cc196e3813d149694f362bb0f8f154f3320abe44724eebe58c23dc54f201d"
-  }
+  },
+  {
+    "name": "nxcode-7B-chat",
+    "provider_url": "https://huggingface.co/NTQAI/Nxcode-CQ-7B-orpo",
+    "license_name": "",
+    "license_url": "",
+    "chat_template": "{% for message in messages %}{% if loop.first and messages[0]['role'] != 'system' %}{{ '<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n' }}{% endif %}{{'<|im_start|>' + message['role'] + '\n' + message['content'] + '<|im_end|>' + '\n'}}{% endfor %}{% if add_generation_prompt %}{{ '<|im_start|>assistant\n' }}{% endif %}",
+    "urls": [
+      "https://huggingface.co/bartowski/Nxcode-CQ-7B-orpo-GGUF/resolve/main/Nxcode-CQ-7B-orpo-Q4_K_M.gguf"
+    ],
+    "sha256":"05bfe075cb5eba80954504061cddeefd21df608d89ff7c7238a71e08469a8891"
+  },
+  {
+    "name": "codeqwen1.5-7B-chat",
+    "provider_url": "https://huggingface.co/Qwen/CodeQwen1.5-7B-Chat",
+    "license_name": "",
+    "license_url": "",
+    "chat_template": "{% for message in messages %}{% if loop.first and messages[0]['role'] != 'system' %}{{ '<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n' }}{% endif %}{{'<|im_start|>' + message['role'] + '\n' + message['content'] + '<|im_end|>' + '\n'}}{% endfor %}{% if add_generation_prompt %}{{ '<|im_start|>assistant\n' }}{% endif %}",
+    "urls": [
+      "https://huggingface.co/Qwen/CodeQwen1.5-7B-Chat-GGUF/resolve/main/codeqwen-1_5-7b-chat-q4_k_m.gguf"
+    ],
+    "sha256":"98572d2cbc355c6be6c89b431df5c26c5bc2838dc755b53fe5f81eb9fa19df3c"
+  }  
 ]
