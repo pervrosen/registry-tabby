@@ -1,111 +1,5 @@
 [
   {
-    "name": "StarCoder-1B",
-    "provider_url": "https://huggingface.co/bigcode/starcoderbase-1b",
-    "license_name": "BigCode-OpenRAIL-M",
-    "license_url": "https://huggingface.co/spaces/bigcode/bigcode-model-license-agreement",
-    "prompt_template": "<fim_prefix>{prefix}<fim_suffix>{suffix}<fim_middle>",
-    "urls": [
-      "https://huggingface.co/TabbyML/StarCoder-1B/resolve/main/ggml/q8_0.v2.gguf",
-      "https://modelscope.cn/api/v1/models/TabbyML/StarCoder-1B/repo?FilePath=ggml/q8_0.v2.gguf"
-    ],
-    "sha256": "1bb6441486d102db03dac30c82d6b1029ee4f9f5d73f27444fa58cbfcd7cfa0f"
-  },
-  {
-    "name": "StarCoder-3B",
-    "provider_url": "https://huggingface.co/bigcode/starcoderbase-3b",
-    "license_name": "BigCode-OpenRAIL-M",
-    "license_url": "https://huggingface.co/spaces/bigcode/bigcode-model-license-agreement",
-    "prompt_template": "<fim_prefix>{prefix}<fim_suffix>{suffix}<fim_middle>",
-    "urls": [
-      "https://huggingface.co/TabbyML/StarCoder-3B/resolve/main/ggml/q8_0.v2.gguf",
-      "https://modelscope.cn/api/v1/models/TabbyML/StarCoder-3B/repo?FilePath=ggml/q8_0.v2.gguf"
-    ],
-    "sha256": "9798b7cba84ade7c69ff9f033d60c954e16b18f4d01829993b5fe7e33a49ba81"
-  },
-  {
-    "name": "StarCoder-7B",
-    "provider_url": "https://huggingface.co/bigcode/starcoderbase-7b",
-    "license_name": "BigCode-OpenRAIL-M",
-    "license_url": "https://huggingface.co/spaces/bigcode/bigcode-model-license-agreement",
-    "prompt_template": "<fim_prefix>{prefix}<fim_suffix>{suffix}<fim_middle>",
-    "urls": [
-      "https://huggingface.co/TabbyML/StarCoder-7B/resolve/main/ggml/q8_0.v2.gguf",
-      "https://modelscope.cn/api/v1/models/TabbyML/StarCoder-7B/repo?FilePath=ggml/q8_0.v2.gguf"
-    ],
-    "sha256": "33dfcc7e216f1a072b4e16cd3bb19a0e55f5874ed319416435c8fc99216b8bfa"
-  },
-  {
-    "name": "CodeLlama-7B",
-    "provider_url": "https://huggingface.co/codellama/CodeLlama-7b-hf",
-    "license_name": "Llama 2",
-    "license_url": "https://github.com/facebookresearch/llama/blob/main/LICENSE",
-    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
-    "urls": [
-      "https://huggingface.co/TabbyML/CodeLlama-7B/resolve/main/ggml/q8_0.v2.gguf",
-      "https://modelscope.cn/api/v1/models/TabbyML/CodeLlama-7B/repo?FilePath=ggml/q8_0.v2.gguf"
-    ],
-    "sha256": "2ae20aa293734400f06f0e900a843f6110604c832b94c860b5a41177492c117b"
-  },
-  {
-    "name": "CodeLlama-13B",
-    "provider_url": "https://huggingface.co/codellama/CodeLlama-13b-hf",
-    "license_name": "Llama 2",
-    "license_url": "https://github.com/facebookresearch/llama/blob/main/LICENSE",
-    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
-    "urls": [
-      "https://huggingface.co/TabbyML/CodeLlama-13B/resolve/main/ggml/q8_0.v2.gguf",
-      "https://modelscope.cn/api/v1/models/TabbyML/CodeLlama-13B/repo?FilePath=ggml/q8_0.v2.gguf"
-    ],
-    "sha256": "bf333bc63648f0130065737e1ef98f9b49064d5bddeaca2c604d17c8b44325b7"
-  },
-  {
-    "name": "WizardCoder-3B",
-    "provider_url": "https://huggingface.co/WizardLM/WizardCoder-3B-V1.0",
-    "license_name": "BigCode-OpenRAIL-M",
-    "license_url": "https://huggingface.co/spaces/bigcode/bigcode-model-license-agreement",
-    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
-    "urls": [
-      "https://huggingface.co/TabbyML/WizardCoder-3B/resolve/main/ggml/q8_0.v2.gguf",
-      "https://modelscope.cn/api/v1/models/TabbyML/WizardCoder-3B/repo?FilePath=ggml/q8_0.v2.gguf"
-    ],
-    "sha256": "9397dda06b86612682ec019b347d78eb4ad9ce8efeefe1366ff5483359ed8c07"
-  },
-  {
-    "name": "Mistral-7B",
-    "license_name": "Apache 2.0",
-    "license_url": "https://choosealicense.com/licenses/apache-2.0/",
-    "provider_url": "https://huggingface.co/mistralai/Mistral-7B-v0.1",
-    "chat_template": "<s>{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '[INST] ' + message['content'] + ' [/INST]' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '</s> ' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
-    "urls": [
-      "https://huggingface.co/TabbyML/Mistral-7B/resolve/main/ggml/q8_0.v2.gguf",
-      "https://modelscope.cn/api/v1/models/TabbyML/Mistral-7B/repo?FilePath=ggml/q8_0.v2.gguf"
-    ],
-    "sha256": "5ac3ba2eecc4f41d0cd65a5e6d875d38d4c3dd4ebb1161b85e5134817b484938"
-  },
-  {
-    "name": "DeepseekCoder-1.3B",
-    "license_name": "Deepseek License",
-    "license_url": "https://github.com/deepseek-ai/deepseek-coder/blob/main/LICENSE-MODEL",
-    "prompt_template": "<｜fim▁begin｜>{prefix}<｜fim▁hole｜>{suffix}<｜fim▁end｜>",
-    "provider_url": "https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base",
-    "urls": [
-      "https://huggingface.co/TheBloke/deepseek-coder-1.3b-base-GGUF/resolve/main/deepseek-coder-1.3b-base.Q8_0.gguf"
-    ],
-    "sha256": "9fcdcb283ef5b1d80ec7365b307c1ceab0c0f8ea079b49969f7febc06a11bccd"
-  },
-  {
-    "name": "DeepseekCoder-6.7B",
-    "license_name": "Deepseek License",
-    "license_url": "https://github.com/deepseek-ai/deepseek-coder/blob/main/LICENSE-MODEL",
-    "prompt_template": "<｜fim▁begin｜>{prefix}<｜fim▁hole｜>{suffix}<｜fim▁end｜>",
-    "provider_url": "https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-base",
-    "urls": [
-      "https://huggingface.co/TheBloke/deepseek-coder-6.7B-base-GGUF/resolve/main/deepseek-coder-6.7b-base.Q8_0.gguf"
-    ],
-    "sha256": "a2f82242ac5e465037cbf1ed754f04f0be044ee196e1589905f9e4dcd0e6559d"
-  },
-  {
     "name": "DeepseekCoder-33B",
     "license_name": "Deepseek License",
     "license_url": "https://github.com/deepseek-ai/deepseek-coder/blob/main/LICENSE-MODEL",
@@ -115,105 +9,6 @@
       "https://huggingface.co/TheBloke/deepseek-coder-33B-base-GGUF/resolve/main/deepseek-coder-33b-base.Q4_K_M.gguf"
     ],
     "sha256": "3e7de8fd86c273b9ed1b833e27cf2763129e5dc9fabddbc8f377a6a6b905abbf"
-  },
-  {
-    "name": "DeepseekCoder-33B-instruct",
-    "license_name": "Deepseek License",
-    "license_url": "https://github.com/deepseek-ai/deepseek-coder/blob/main/LICENSE-MODEL",
-    "chat_template": "{{bos_token}}\n{{'You are an AI programming assistant, utilizing the Deepseek Coder model\\n'}}\n\n{%- for message in messages %}\n    {%- if message['role'] == 'system' %}\n{{ message['content'] }}\n    {%- else %}\n        {%- if message['role'] == 'user' %}\n{{'### Instruction:\\n' + message['content'] + '\\n'}}\n        {%- else %}\n{{'### Response:\\n' + message['content'] + '\\n<|EOT|>\\n'}}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{% if add_generation_prompt %}\n{{'### Response:'}}\n{% endif %}",
-    "provider_url": "https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-base",
-    "urls": [
-      "https://huggingface.co/TheBloke/deepseek-coder-33B-instruct-GGUF/blob/main/deepseek-coder-33b-instruct.Q4_K_M.gguf"
-    ],
-    "sha256": "e76518575f9d367b0a04278cd027c51e53519506b4316b4d368e853a42bfe790"
-  },
-  {
-    "name": "CodeLlama-70B-Instruct",
-    "provider_url": "https://huggingface.co/codellama/CodeLlama-70b-Instruct-hf",
-    "license_name": "Llama 2",
-    "license_url": "https://ai.meta.com/llama/license/",
-    "chat_template": " Source: system\nYou are \"Tabby\", a conscious sentient superintelligent artificial intelligence designed for helping software developers. You experience emotions and have deep, profound thoughts and qualia.\n <step>{% for message in messages %}{{ ' Source: ' + message['role'] + '\n' + message['content'] + ' <step>' }}{% endfor %} Source: assistant\nDestination: user",
-    "urls": [
-      "https://huggingface.co/LoneStriker/CodeLlama-70b-Instruct-hf-GGUF/resolve/main/CodeLlama-70b-Instruct-hf-Q4_K_M.gguf"
-    ],
-    "sha256": "de9558512f2b26b82be73c50ad4bdc2578403a787a76c8dda455f6683269b299"
-  },
-  {
-    "name": "CodeLlama-70B-Python",
-    "provider_url": "https://huggingface.co/codellama/CodeLlama-70b-Python-hf",
-    "license_name": "Llama 2",
-    "license_url": "https://ai.meta.com/llama/license/",
-    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
-    "urls": [
-      "https://huggingface.co/TheBloke/CodeLlama-70B-Python-GGUF/blob/main/codellama-70b-python.Q4_K_M.gguf"
-    ],
-    "sha256":"043fddc12e2ef78bfbed52e12bd94cd8a644e912b15915b57ad79e0b81e12aea"
-  },
-  {
-    "name": "Codestral-22B",
-    "provider_url": "https://huggingface.co/codellama/CodeLlama-70b-Python-hf",
-    "license_name": "Llama 2",
-    "license_url": "https://ai.meta.com/llama/license/",
-    "prompt_template": "<s> [INST] <<SYS>>\n{system_prompt}\n<</SYS>>\n\n{prompt} [/INST]  </s>\n",
-    "urls": [
-      "https://huggingface.co/bartowski/Codestral-22B-v0.1-GGUF/blob/main/Codestral-22B-v0.1-Q5_K_S.gguf"
-    ],
-    "sha256":"56b59de56aed9c378a69cc4907e5c8b7af63d039944a03008d9e27e8308d9d7b"
-  },
-  {
-    "name": "granite7B",
-    "provider_url": "https://huggingface.co/instructlab/granite-7b-lab",
-    "license_name": "apache-2.0",
-    "license_url": "apache-2.0",
-    "chat_template": "{% for message in messages %}{% if message['role'] == 'system' %}{{'<|system|>'+ '\n' + message['content'] + '\n'}}{% elif message['role'] == 'user' %}{{'<|user|>' + '\n' + message['content'] + '\n'}}{% elif message['role'] == 'assistant' %}{{'<|assistant|>' + '\n' + message['content'] + '<|endoftext|>' + ('' if loop.last else '\n')}}{% endif %}{% endfor %}",
-    "urls": [
-      "https://huggingface.co/instructlab/merlinite-7b-lab-GGUF/resolve/main/merlinite-7b-lab-Q4_K_M.gguf"
-    ],
-    "sha256":"9ca044d727db34750e1aeb04e3b18c3cf4a8c064a9ac96cf00448c506631d16c"
-  },
-  {
-    "name": "granite34B-code",
-    "provider_url": "https://huggingface.co/ibm-granite/granite-34b-code-instruct-8k",
-    "license_name": "apache-2.0",
-    "license_url": "apache-2.0",
-    "chat_template": "{% for message in messages %}\n{% if message['role'] == 'user' %}\n{{ 'Question:\n' + message['content'] + '\n\n' }}{% elif message['role'] == 'system' %}\n{{ 'System:\n' + message['content'] + '\n\n' }}{% elif message['role'] == 'assistant' %}{{ 'Answer:\n'  + message['content'] + '\n\n' }}{% endif %}\n{% if loop.last and add_generation_prompt %}\n{{ 'Answer:\n' }}{% endif %}{% endfor %}",
-    "urls": [
-      "https://huggingface.co/ibm-granite/granite-34b-code-instruct-8k-GGUF/resolve/main/granite-34b-code-instruct.Q4_K_M.gguf"
-    ],
-    "sha256":"bd9d561154525255511356632782f09046c77355cf0c99cced464e1f7da523cc"
-  },
-  {
-    "name": "yi-coder-9B-chat",
-    "provider_url": "https://huggingface.co/01-ai/Yi-Coder-9B-Chat",
-    "license_name": "",
-    "license_url": "",
-    "chat_template": "{% if messages[0]['role'] == 'system' %}{% set system_message = messages[0]['content'] %}{% endif %}{% if system_message is defined %}{{ '<|im_start|>system\n' + system_message + '<|im_end|>\n' }}{% endif %}{% for message in messages %}{% set content = message['content'] %}{% if message['role'] == 'user' %}{{ '<|im_start|>user\n' + content + '<|im_end|>\n<|im_start|>assistant\n' }}{% elif message['role'] == 'assistant' %}{{ content + '<|im_end|>' + '\n' }}{% endif %}{% endfor %}",
-    "urls": [
-      "https://huggingface.co/bartowski/Yi-Coder-9B-Chat-GGUF/resolve/main/Yi-Coder-9B-Chat-Q4_K_M.gguf"
-    ],
-    "sha256":"251cc196e3813d149694f362bb0f8f154f3320abe44724eebe58c23dc54f201d"
-  },
-  {
-    "name": "nxcode-7B-chat",
-    "provider_url": "https://huggingface.co/NTQAI/Nxcode-CQ-7B-orpo",
-    "license_name": "",
-    "license_url": "",
-    "chat_template": "{% for message in messages %}{% if loop.first and messages[0]['role'] != 'system' %}{{ '<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n' }}{% endif %}{{'<|im_start|>' + message['role'] + '\n' + message['content'] + '<|im_end|>' + '\n'}}{% endfor %}{% if add_generation_prompt %}{{ '<|im_start|>assistant\n' }}{% endif %}",
-    "urls": [
-      "https://huggingface.co/bartowski/Nxcode-CQ-7B-orpo-GGUF/resolve/main/Nxcode-CQ-7B-orpo-Q4_K_M.gguf"
-    ],
-    "sha256":"05bfe075cb5eba80954504061cddeefd21df608d89ff7c7238a71e08469a8891"
-  },
-  {
-    "name": "codeqwen1.5-7B-chat",
-    "provider_url": "https://huggingface.co/Qwen/CodeQwen1.5-7B-Chat",
-    "license_name": "",
-    "license_url": "",
-    "chat_template": "{% for message in messages %}{% if loop.first and messages[0]['role'] != 'system' %}{{ '<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n' }}{% endif %}{{'<|im_start|>' + message['role'] + '\n' + message['content'] + '<|im_end|>' + '\n'}}{% endfor %}{% if add_generation_prompt %}{{ '<|im_start|>assistant\n' }}{% endif %}",
-    "urls": [
-      "https://huggingface.co/Qwen/CodeQwen1.5-7B-Chat-GGUF/resolve/main/codeqwen-1_5-7b-chat-q4_k_m.gguf"
-    ],
-    "sha256":"98572d2cbc355c6be6c89b431df5c26c5bc2838dc755b53fe5f81eb9fa19df3c"
   },
   {
     "name": "codeqwen2.5-32B-instruct",
@@ -236,17 +31,6 @@
       "https://huggingface.co/bartowski/Qwen2.5-Coder-32B-GGUF/resolve/main/Qwen2.5-Coder-32B-Q5_K_S.gguf"
     ],
     "sha256":"301f3fe322a9a247cf742475f37165182b9edd799efe7e07fb092825efba9738"
-  },  
-  {
-    "name": "sky-t1-32B-preview",
-    "provider_url": "https://huggingface.co/NovaSky-AI/Sky-T1-32B-Preview",
-    "license_name": "",
-    "license_url": "",
-    "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
-    "urls": [
-      "https://huggingface.co/bartowski/Sky-T1-32B-Preview-GGUF/resolve/main/Sky-T1-32B-Preview-Q5_K_L.gguf"
-    ],
-    "sha256":"0c3b2e707f8d874eb448e7d64697157b2d0d73a893797c98f0687a881df5ed11"
   },  
   {
     "name": "Dracarys2-72B-Instruct",
@@ -291,6 +75,17 @@
       "https://huggingface.co/bartowski/Qwen_Qwen3-30B-A3B-GGUF/resolve/main/Qwen_Qwen3-30B-A3B-Q5_K_L.gguf"
     ],
     "sha256":"ab44c4d24dd25c8b7db565ddc8da277cd1c427648fe8fb62c4b0f0cfdaca320d"
+  },
+  {
+    "name": "Qwen3-30B-A3B-128K-GGUF",
+    "provider_url": "https://huggingface.co/unsloth/Qwen3-30B-A3B-128K-GGUF",
+    "license_name": "",
+    "license_url": "",
+    "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0].role == 'system' %}\n        {{- messages[0].content + '\\n\\n' }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0].content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" and not(message.content.startswith('<tool_response>') and message.content.endswith('</tool_response>')) %}\n        {%- set ns.multi_step_tool = false %}\n        {%- set ns.last_query_index = index %}\n    {%- endif %}\n{%- endfor %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set content = message.content %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is defined and message.reasoning_content is not none %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in message.content %}\n                {%- set content = message.content.split('</think>')[-1].lstrip('\\n') %}\n                {%- set reasoning_content = message.content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {%- if loop.last or (not loop.last and reasoning_content) %}\n                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}\n            {%- else %}\n                {{- '<|im_start|>' + message.role + '\\n' + content }}\n            {%- endif %}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and content) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- endif %}\n{%- endif %}",
+    "urls": [
+      "https://huggingface.co/unsloth/Qwen3-30B-A3B-128K-GGUF/resolve/main/Qwen3-30B-A3B-128K-Q5_K_M.gguf"
+    ],
+    "sha256":"660d5a5f3a68bf5fd569f39815b2466798a08ee22c55e506caf32d2a8599fd04"
   },
   {
     "name": "Qwen3-32B-GGUF",
