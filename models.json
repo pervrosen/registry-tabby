@@ -97,5 +97,17 @@
       "https://huggingface.co/bartowski/open-r1_OlympicCoder-32B-GGUF/resolve/main/open-r1_OlympicCoder-32B-Q5_K_L.gguf"
     ],
     "sha256":"4472c836025a4fe42a0aed71676c6e32b13e84382f92c979d8a8e366a1379ecf"
+  },
+  {
+    "name": "mistral-devstral-small-2505-q6_k.gguf",
+    "provider_url": "bartowski/mistralai_Devstral-Small-2505-GGUF",
+    "license_name": "",
+    "license_url": "",
+    "chat_template": "<s>[SYSTEM_PROMPT]{system_prompt}[/SYSTEM_PROMPT][INST]{prompt}[/INST]",
+    "urls": [
+      "https://huggingface.co/bartowski/mistralai_Devstral-Small-2505-GGUF/resolve/main/mistralai_Devstral-Small-2505-Q6_K_L.gguf"
+    ],
+    "sha256":"12e5c4d55c2245d1c4e79905b52c42702d01d2ee69d15d192307859453ade8e7"
   }  
+  
 ]
