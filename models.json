@@ -99,7 +99,7 @@
     "sha256":"4472c836025a4fe42a0aed71676c6e32b13e84382f92c979d8a8e366a1379ecf"
   },
   {
-    "name": "mistral-devstral-small-2505-q6_k.gguf",
+    "name": "mistral-devstral-small-2505-q6_k_gguf",
     "provider_url": "bartowski/mistralai_Devstral-Small-2505-GGUF",
     "license_name": "",
     "license_url": "",
