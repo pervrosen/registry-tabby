@@ -99,15 +99,15 @@
     "sha256":"4472c836025a4fe42a0aed71676c6e32b13e84382f92c979d8a8e366a1379ecf"
   },
   {
-    "name": "mistral-devstral-small-2505-q6_k-gguf",
-    "provider_url": "bartowski/mistralai_Devstral-Small-2505-GGUF",
+    "name": "Devstral-Small-2505-UD-Q8_K_XL-gguf",
+    "provider_url": "https://huggingface.co/unsloth/Devstral-Small-2505-GGUF/blob/main/Devstral-Small-2505-UD-Q8_K_XL.gguf",
     "license_name": "",
     "license_url": "",
     "chat_template": "<s>[SYSTEM_PROMPT]{system_prompt}[/SYSTEM_PROMPT][INST]{prompt}[/INST]",
     "urls": [
-      "https://huggingface.co/bartowski/mistralai_Devstral-Small-2505-GGUF/resolve/main/mistralai_Devstral-Small-2505-Q6_K_L.gguf"
+      "https://huggingface.co/unsloth/Devstral-Small-2505-GGUF/resolve/main/Devstral-Small-2505-UD-Q8_K_XL.gguf"
     ],
-    "sha256":"12e5c4d55c2245d1c4e79905b52c42702d01d2ee69d15d192307859453ade8e7"
+    "sha256":"249babcc2c3ed84cb75b54cf7fd33aa370ed6b28eb5b6877cbf7ef514826f078"
   }  
   
 ]
