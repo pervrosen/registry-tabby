@@ -129,6 +129,6 @@
     "urls": [
       "https://huggingface.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF/resolve/main/Qwen3-Coder-30B-A3B-Instruct-UD-Q5_K_XL.gguf"
     ],
-    "sha256":"95ebf93117783ecc53025ac2c5ea13362663347d65f4792f7556eb2116222879"
+    "sha256":"1d3145e9a966638a9dd83016bf79074b9a20c16f6105a5266c2b91c08d7e594c"
   }
 ]
